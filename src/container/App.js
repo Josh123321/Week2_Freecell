@@ -10,13 +10,17 @@ const gameWrapperStyle = {
   width: '100vw'
 }
 
-const demoData = [{ suits: SuitType.SPADE, number: 13 }, { suits: SuitType.HEART, number: 12 }];
-
-const demoData2 = [{ suits: SuitType.DIAMOND, number: 10 }, { suits: SuitType.CLUB, number: 11 }];
-
 const suitArr = [SuitType.SPADE, SuitType.HEART, SuitType.DIAMOND, SuitType.CLUB];
 const numberArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
+/**
+ * TODO 2019.07.29
+ * 1. 檢核拖曳規則
+ * 2. top-card-block 無法存放卡片
+ * 3. 計時器
+ * 4. 按鈕列表
+ * 5. 透過redux或是context控管狀態，state不要傳遞那麼多層
+ */
 function App() {
   const [cardArr, setCardArr] = useState([]);
   const [seqArr, setSeqArr] = useState([]);
@@ -54,15 +58,10 @@ function App() {
       setCardArr([...cardArr]);
       setSeqArr([...seqArr]);
     }
-    /**
-     * TODO
-     * 1.隨機排序卡牌
-     * 2.實作Draggable
-     * 3.根據拖曳，新增、移除陣列
-     */
   });
   return (
     <div className="gameWrapper" style={gameWrapperStyle}>
+      {/* 暫放區及完成區 */}
       <div className="top-card-block">
         <Card />
         <Card />
@@ -77,24 +76,16 @@ function App() {
         <Card suits={SuitType.DIAMOND} />
         <Card suits={SuitType.CLUB} />
       </div>
-
+      {/* 卡片區 */}
       <div className="game-block">
-        <CardGroup groupData={seqArr[0]}/>
-        <CardGroup groupData={seqArr[1]}/>
-        <CardGroup groupData={seqArr[2]}/>
-        <CardGroup groupData={seqArr[3]}/>
-        <CardGroup groupData={seqArr[4]}/>
-        <CardGroup groupData={seqArr[5]}/>
-        <CardGroup groupData={seqArr[6]}/>
-        <CardGroup groupData={seqArr[7]}/> 
+        {
+          seqArr.map((data,index) => {
+            return(<CardGroup key={index} groupData={data} seqArr={seqArr} seqIndex={index} updateFunc={setSeqArr}/>)
+          })
+        }      
       </div>
-
-      <div className="icon-bar">
-
-
-      </div>
-
-
+      {/* 功能列表 */}
+      <div className="icon-bar"></div>
     </div>
   );
 }

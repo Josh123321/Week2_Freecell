@@ -1,12 +1,11 @@
 import React from 'react';
 import Card from './Card';
 
-export const CardGroup = ({ groupData }) => {
-    console.log(groupData);
+export const CardGroup = ({ groupData,seqArr,seqIndex,updateFunc }) => {
     return (
         <div className="card-sequnece">
             {
-                groupData && groupData.map((data, index) => { 
+                groupData.length >  0 ? groupData.map((data, index) => { 
                     const cardInterval = index * 18;
                     const sequneceStyle = {
                         position: 'relative',
@@ -14,11 +13,12 @@ export const CardGroup = ({ groupData }) => {
                         bottom: `${cardInterval}vh`
                     }
                     return (
-                        <React.Fragment>
-                            <Card suits={data.suit} number={data.number} style={sequneceStyle} />
+                        <React.Fragment key={index}>
+                            <Card suits={data.suit} number={data.number} cardIndex={index} seqIndex={seqIndex} seqArr={seqArr} style={sequneceStyle} updateFunc={updateFunc}/>
                         </React.Fragment>
                     )
-                })
+                }) :
+                <Card isDraggable={false} cardIndex={0} seqIndex={seqIndex} seqArr={seqArr} updateFunc={updateFunc}/>                
             }
         </div>
     )
