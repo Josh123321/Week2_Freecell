@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+}
+  
+body {
+    display: flex;
+    width:100%
+}
+
+
+.top-card-block {
+    display: flex;
+    justify-content: space-around;
+}
+
+.game-block {
+    display: inline-flex;
+    width: 100%;
+    height: 80vh;
+    justify-content: space-evenly;
+}
