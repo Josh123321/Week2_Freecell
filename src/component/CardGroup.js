@@ -6,11 +6,11 @@ export const CardGroup = ({ groupData,seqArr,seqIndex,updateFunc }) => {
         <div className="card-sequnece">
             {
                 groupData.length >  0 ? groupData.map((data, index) => { 
-                    const cardInterval = index * 18;
+                    const cardInterval = index * 135;
                     const sequneceStyle = {
                         position: 'relative',
                         zIndex: index,
-                        bottom: `${cardInterval}vh`
+                        bottom: `${cardInterval}px`
                     }
                     return (
                         <React.Fragment key={index}>

@@ -44,7 +44,7 @@ const Card = ({suits,number,isDraggable=true,seqArr,seqIndex,cardIndex,updateFun
     } else {
         picId = `card_blank`;
     }
-    const picPath = `${window.location.origin}/img/cards/${picId}.png`;
+    const picPath = `${window.location.origin}/Images/${picId}.png`;
     return(
         <div 
             className="card draggable-card"
