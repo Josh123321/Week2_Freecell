@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Week2_Freecell/static/css/main.15f16324.chunk.css",
-    "main.js": "/Week2_Freecell/static/js/main.e746d6cb.chunk.js",
-    "main.js.map": "/Week2_Freecell/static/js/main.e746d6cb.chunk.js.map",
+    "main.js": "/Week2_Freecell/static/js/main.9fe5bd6e.chunk.js",
+    "main.js.map": "/Week2_Freecell/static/js/main.9fe5bd6e.chunk.js.map",
     "runtime~main.js": "/Week2_Freecell/static/js/runtime~main.d220063a.js",
     "runtime~main.js.map": "/Week2_Freecell/static/js/runtime~main.d220063a.js.map",
     "static/js/2.a3e86c29.chunk.js": "/Week2_Freecell/static/js/2.a3e86c29.chunk.js",
     "static/js/2.a3e86c29.chunk.js.map": "/Week2_Freecell/static/js/2.a3e86c29.chunk.js.map",
     "index.html": "/Week2_Freecell/index.html",
-    "precache-manifest.b686387278f9bb8e8381d50d96ec04c8.js": "/Week2_Freecell/precache-manifest.b686387278f9bb8e8381d50d96ec04c8.js",
+    "precache-manifest.702abafb1e73f420d37b7be1b44eadc1.js": "/Week2_Freecell/precache-manifest.702abafb1e73f420d37b7be1b44eadc1.js",
     "service-worker.js": "/Week2_Freecell/service-worker.js",
     "static/css/main.15f16324.chunk.css.map": "/Week2_Freecell/static/css/main.15f16324.chunk.css.map",
     "static/media/freecell_bg.png": "/Week2_Freecell/static/media/freecell_bg.b8c3e933.png"
